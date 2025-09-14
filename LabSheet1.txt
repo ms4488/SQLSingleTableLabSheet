@@ -1,0 +1,20 @@
+Q1-1: SELECT owner, name FROM pet WHERE sex = 'f';
+Q1-2: SELECT name, birth FROM pet WHERE species = 'dog';
+Q1-3: SELECT DISTINCT owner FROM pet WHERE species = 'bird';
+Q1-4: SELECT species FROM pet WHERE sex = 'f';
+Q1-5: SELECT name, birth FROM pet WHERE species = 'cat' or species = 'bird';
+Q1-6: SELECT name, species FROM pet WHERE species = 'cat' OR species = 'bird' AND sex = 'f';
+
+Q2-1: SELECT owner, name FROM pet WHERE name LIKE '%er' OR name LIKE '%all';
+Q2-2: SELECT name FROM pet WHERE owner LIKE '%e%';
+Q2-3: SELECT name FROM pet WHERE name NOT LIKE '%fy';
+Q2-4: SELECT DISTINCT owner FROM pet WHERE owner LIKE '____';
+Q2-5: SELECT owner FROM pet 
+WHERE UPPER(SUBSTR(owner, 1, 1)) IN ('A', 'B', 'C', 'D', 'E')
+AND 
+UPPER(SUBSTR(owner, -1, 1)) IN ('A', 'B', 'C', 'D', 'E');
+Q2-6: SELECT owner FROM pet 
+WHERE (SUBSTR(owner, 1, 1)) IN ('A', 'B', 'C', 'D', 'E')
+AND 
+(SUBSTR(owner, -1, 1)) IN ('a', 'b', 'c', 'd', 'e');
+
