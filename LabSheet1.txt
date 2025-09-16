@@ -18,3 +18,10 @@ WHERE (SUBSTR(owner, 1, 1)) IN ('A', 'B', 'C', 'D', 'E')
 AND 
 (SUBSTR(owner, -1, 1)) IN ('a', 'b', 'c', 'd', 'e');
 
+Q3-1: SELECT owner, AVG(checkups) AS 'average checkups' FROM pet GROUP BY owner;
+Q3-2: SELECT species, COUNT(*) AS 'number of pets' FROM pet GROUP BY species ORDER BY number of pets ASC;
+Q3-3: SELECT owner, species,  COUNT(*) AS 'number of pets' FROM pet GROUP BY owner, species;
+Q3-4: SELECT owner, COUNT(DISTINCT species) AS NumberOfSpecies FROM pet GROUP BY owner ORDER BY owner;
+Q3-5: SELECT sex, COUNT(*) AS NumberOfPets  FROM pet WHERE sex IS NOT '' GROUP BY sex;
+Q3-6: SELECT owner, COUNT(*) AS NumberOfBirds FROM pet WHERE species = 'bird' GROUP BY owner;
+Q3-7: SELECT owner, COUNT(checkups) AS 'total checkups' FROM pet GROUP BY owner;
